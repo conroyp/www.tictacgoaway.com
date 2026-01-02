@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacGoAway - Tic-Tac-Toe, Evolved</title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="Tic-tac-toe, evolved. You only get 3 pieces-place a 4th and your oldest vanishes! A fresh twist on the classic that keeps every game exciting.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TicTacGoAway - Tic-Tac-Toe, Evolved">
+    <meta property="og:description" content="You only get 3 pieces-place a 4th and your oldest vanishes! A fresh twist on the classic that keeps every game exciting.">
+    <meta property="og:image" content="https://www.tictacgoaway.com/og-image.png">
+    <meta property="og:url" content="https://www.tictacgoaway.com/">
+    <meta property="og:site_name" content="TicTacGoAway">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TicTacGoAway - Tic-Tac-Toe, Evolved">
+    <meta name="twitter:description" content="You only get 3 pieces-place a 4th and your oldest vanishes! A fresh twist on the classic that keeps every game exciting.">
+    <meta name="twitter:image" content="https://www.tictacgoaway.com/og-image.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#FF6B4A">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Tailwind CSS v3.4.19 - Purged */
+        *,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: ;box-sizing:border-box;border:0 solid #e5e7eb}::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.left-1\/2{left:50%}.top-6{top:1.5rem}.z-20{z-index:20}.z-40{z-index:40}.z-50{z-index:50}.mx-1{margin-left:.25rem;margin-right:.25rem}.mx-2{margin-left:.5rem;margin-right:.5rem}.mb-1{margin-bottom:.25rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mr-1{margin-right:.25rem}.mt-5{margin-top:1.25rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-24{height:6rem}.h-6{height:1.5rem}.max-h-0{max-height:0}.max-h-20{max-height:5rem}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-24{width:6rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-full{width:100%}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.scale-95{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-95{--tw-scale-x:.95;--tw-scale-y:.95}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes fadeOut{0%{transform:scale(1) rotate(0deg);opacity:1}to{transform:scale(0) rotate(10deg);opacity:0}}.animate-fade-out{animation:fadeOut .4s ease-out forwards}@keyframes popIn{0%{transform:scale(0) rotate(-10deg);opacity:0}to{transform:scale(1) rotate(0deg);opacity:1}}.animate-pop-in{animation:popIn .25s cubic-bezier(.175,.885,.32,1.275)}@keyframes pulseWarning{0%,to{transform:scale(1);opacity:1}50%{transform:scale(.92);opacity:.7}}.animate-pulse-warning{animation:pulseWarning .8s ease-in-out infinite}.cursor-pointer{cursor:pointer}.resize{resize:both}.list-none{list-style-type:none}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-y-0\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.125rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.125rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:.75rem}.border-2{border-width:2px}.border-3{border-width:3px}.border-t{border-top-width:1px}.border-charcoal{--tw-border-opacity:1;border-color:rgb(45 49 66/var(--tw-border-opacity,1))}.border-charcoal\/20{border-color:rgba(45,49,66,.2)}.bg-charcoal{--tw-bg-opacity:1;background-color:rgb(45 49 66/var(--tw-bg-opacity,1))}.bg-charcoal\/70{background-color:rgba(45,49,66,.7)}.bg-coral{--tw-bg-opacity:1;background-color:rgb(255 107 74/var(--tw-bg-opacity,1))}.bg-cream{--tw-bg-opacity:1;background-color:rgb(254 247 236/var(--tw-bg-opacity,1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.p-3{padding:.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-7xl{font-size:4.5rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.tracking-tight{letter-spacing:-.025em}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11/var(--tw-text-opacity,1))}.text-charcoal{--tw-text-opacity:1;color:rgb(45 49 66/var(--tw-text-opacity,1))}.text-coral{--tw-text-opacity:1;color:rgb(255 107 74/var(--tw-text-opacity,1))}.text-cream{--tw-text-opacity:1;color:rgb(254 247 236/var(--tw-text-opacity,1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74/var(--tw-text-opacity,1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity,1))}.text-teal{--tw-text-opacity:1;color:rgb(32 178 170/var(--tw-text-opacity,1))}.text-warm-gray{--tw-text-opacity:1;color:rgb(154 155 157/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.opacity-0{opacity:0}.opacity-100{opacity:1}.shadow-chunky{--tw-shadow:6px 6px 0px #2d3142;--tw-shadow-colored:6px 6px 0px var(--tw-shadow-color)}.shadow-chunky,.shadow-chunky-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-chunky-sm{--tw-shadow:4px 4px 0px #2d3142;--tw-shadow-colored:4px 4px 0px var(--tw-shadow-color)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.hover\:bg-coral:hover{--tw-bg-opacity:1;background-color:rgb(255 107 74/var(--tw-bg-opacity,1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity,1))}.hover\:text-coral:hover{--tw-text-opacity:1;color:rgb(255 107 74/var(--tw-text-opacity,1))}@media (min-width:768px){.md\:h-28{height:7rem}.md\:w-28{width:7rem}.md\:gap-3{gap:.75rem}.md\:gap-6{gap:1.5rem}.md\:p-4{padding:1rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}
+
+        /* Custom Styles */
+        * { font-family: 'Outfit', system-ui, sans-serif; }
+
+        body {
+            background-color: #FEF7EC;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(255,107,74,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(32,178,170,0.08) 0%, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .btn-chunky {
+            transition: all 0.15s ease;
+            transform: translate(0, 0);
+        }
+
+        .btn-chunky:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px #2D3142 !important;
+        }
+
+        .btn-chunky:active {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px #2D3142 !important;
+        }
+
+        .cell {
+            transition: all 0.15s ease;
+            transform: translate(0, 0);
+        }
+
+        .cell:hover:not(.occupied) {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px #2D3142 !important;
+        }
+
+        .cell:active:not(.occupied) {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px #2D3142 !important;
+        }
+
+        .cell.occupied {
+            cursor: not-allowed;
+        }
+
+        .winning-cell {
+            animation: wiggle 0.5s ease-in-out;
+            background-color: #FFE66D !important;
+        }
+
+        .text-x { color: #FF6B4A; }
+        .text-o { color: #20B2AA; }
+
+        /* Mode toggle styles */
+        .mode-toggle {
+            position: relative;
+        }
+
+        .mode-toggle input {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .mode-toggle .slider {
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: calc(50% - 4px);
+            height: calc(100% - 8px);
+            background: #2D3142;
+            border-radius: 9999px;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .mode-toggle input:checked ~ .slider {
+            transform: translateX(100%);
+        }
+
+        /* Difficulty pills */
+        .diff-pill {
+            transition: all 0.2s ease;
+        }
+
+        .diff-pill.active {
+            background-color: #2D3142;
+            color: white;
+        }
+
+        .diff-pill:not(.active):hover {
+            background-color: #e5e5e5;
+        }
+    </style>
+</head>
+<body class="text-charcoal">
+    <!-- Main Container -->
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 py-8">
+
+        <!-- Header -->
+        <header class="text-center mb-6">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-1">
+                <span class="text-charcoal">TicTac</span><span class="text-coral">GoAway</span>
+            </h1>
+            <p class="text-warm-gray text-sm md:text-base flex items-center justify-center gap-2">
+                Get three in a row, before your pieces disappear!
+                <button id="helpBtn" class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-charcoal text-cream text-xs font-bold hover:bg-coral transition-colors">
+                    ?
+                </button>
+            </p>
+        </header>
+
+        <!-- Game Mode Toggle (Centered) -->
+        <div class="flex flex-col items-center gap-3 mb-5">
+            <div class="mode-toggle relative w-64 h-12 bg-gray-200 rounded-full border-2 border-charcoal shadow-chunky-sm">
+                <input type="checkbox" id="modeToggle" class="cursor-pointer">
+                <div class="slider rounded-full"></div>
+                <div class="absolute inset-0 flex pointer-events-none">
+                    <span id="label2P" class="flex-1 flex items-center justify-center font-semibold text-sm text-white z-20 transition-colors">
+                        👥 &nbsp; 2 Players
+                    </span>
+                    <span id="labelAI" class="flex-1 flex items-center justify-center font-semibold text-sm text-charcoal z-20 transition-colors">
+                        🤖 &nbsp; vs Computer
+                    </span>
+                </div>
+            </div>
+
+            <!-- Difficulty Selector (appears below when vs Bot) -->
+            <div id="difficultySelector" class="flex items-center gap-2 h-10 overflow-hidden transition-all duration-300 opacity-0 max-h-0">
+                <span class="text-warm-gray text-sm mr-1">Difficulty:</span>
+                <button class="diff-pill px-4 py-1.5 rounded-full text-sm font-medium border-2 border-charcoal bg-white" data-diff="easy">
+                    Easy
+                </button>
+                <button class="diff-pill active px-4 py-1.5 rounded-full text-sm font-medium border-2 border-charcoal" data-diff="medium">
+                    Medium
+                </button>
+                <button class="diff-pill px-4 py-1.5 rounded-full text-sm font-medium border-2 border-charcoal bg-white" data-diff="hard">
+                    Hard
+                </button>
+            </div>
+
+            <!-- Stats Bar (only shown vs Computer, appears below difficulty) -->
+            <div id="statsBar" class="hidden items-center gap-4 md:gap-6 text-sm bg-white px-5 py-2.5 rounded-full shadow-chunky-sm border-2 border-charcoal">
+                <div class="flex items-center gap-1.5">
+                    <span class="text-warm-gray">W</span>
+                    <span id="winCount" class="font-bold text-green-600">0</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="text-warm-gray">L</span>
+                    <span id="lossCount" class="font-bold text-red-500">0</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="text-warm-gray">D</span>
+                    <span id="drawCount" class="font-bold text-charcoal">0</span>
+                </div>
+                <div id="streakDisplay" class="flex items-center gap-1.5 hidden">
+                    <span class="text-amber-500">🔥</span>
+                    <span id="streakCount" class="font-bold text-amber-500">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Turn Indicator -->
+        <div id="turnIndicator" class="mb-4 text-lg md:text-xl font-semibold">
+            <span id="turnText">Player <span class="text-coral font-extrabold">X</span>'s turn</span>
+        </div>
+
+        <!-- Game Board -->
+        <div class="bg-charcoal p-3 md:p-4 rounded-2xl shadow-lg mb-6">
+            <div id="board" class="grid grid-cols-3 gap-2 md:gap-3">
+                <button class="cell w-24 h-24 md:w-28 md:h-28 bg-cream rounded-xl border-3 border-charcoal shadow-chunky flex items-center justify-center text-5xl md:text-6xl font-extrabold" data-index="0"></button>
+                <button class="cell w-24 h-24 md:w-28 md:h-28 bg-cream rounded-xl border-3 border-charcoal shadow-chunky flex items-center justify-center text-5xl md:text-6xl font-extrabold" data-index="1"></button>
+                <button class="cell w-24 h-24 md:w-28 md:h-28 bg-cream rounded-xl border-3 border-charcoal shadow-chunky flex items-center justify-center text-5xl md:text-6xl font-extrabold" data-index="2"></button>
+                <button class="cell w-24 h-24 md:w-28 md:h-28 bg-cream rounded-xl border-3 border-charcoal shadow-chunky flex items-center justify-center text-5xl md:text-6xl font-extrabold" data-index="3"></button>
+                <button class="cell w-24 h-24 md:w-28 md:h-28 bg-cream rounded-xl border-3 border-charcoal shadow-chunky flex items-center justify-center text-5xl md:text-6xl font-extrabold" data-index="4"></button>
+                <button class="cell w-24 h-24 md:w-28 md:h-28 bg-cream rounded-xl border-3 border-charcoal shadow-chunky flex items-center justify-center text-5xl md:text-6xl font-extrabold" data-index="5"></button>
+                <button class="cell w-24 h-24 md:w-28 md:h-28 bg-cream rounded-xl border-3 border-charcoal shadow-chunky flex items-center justify-center text-5xl md:text-6xl font-extrabold" data-index="6"></button>
+                <button class="cell w-24 h-24 md:w-28 md:h-28 bg-cream rounded-xl border-3 border-charcoal shadow-chunky flex items-center justify-center text-5xl md:text-6xl font-extrabold" data-index="7"></button>
+                <button class="cell w-24 h-24 md:w-28 md:h-28 bg-cream rounded-xl border-3 border-charcoal shadow-chunky flex items-center justify-center text-5xl md:text-6xl font-extrabold" data-index="8"></button>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-3">
+            <button id="resetBtn" class="btn-chunky px-8 py-3 bg-coral text-white rounded-full font-bold text-lg border-2 border-charcoal shadow-chunky">
+                New Game
+            </button>
+            <button id="soundBtn" class="btn-chunky w-12 h-12 bg-white rounded-full border-2 border-charcoal shadow-chunky-sm flex items-center justify-center text-xl">
+                <span id="soundIcon">🔊</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="fixed inset-0 bg-charcoal/70 flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-300 p-4">
+        <div class="bg-cream rounded-2xl p-6 max-w-md w-full border-3 border-charcoal shadow-chunky transform scale-95 transition-transform duration-300">
+            <h2 class="text-3xl font-extrabold text-charcoal mb-3">How to Play</h2>
+
+            <p class="text-sm text-warm-gray mb-4">Classic tic-tac-toe often ends in a draw once you know the trick. This twist keeps things interesting - no more stalemates!</p>
+
+            <div class="space-y-3 text-sm text-charcoal">
+                <div class="bg-white rounded-xl p-3 border-2 border-charcoal">
+                    <h3 class="font-bold text-coral mb-1">🎯 Goal</h3>
+                    <p>Get three in a row - horizontal, vertical, or diagonal.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-3 border-2 border-charcoal">
+                    <h3 class="font-bold text-teal mb-1">✨ The Twist</h3>
+                    <p>You can only have <strong>3 pieces</strong> at once. Place your 4th, and your oldest vanishes!</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-3 border-2 border-charcoal">
+                    <h3 class="font-bold text-amber-500 mb-1">👀 Watch For</h3>
+                    <p>The <span class="font-bold">pulsing piece</span> is about to vanish when you place.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-3 border-2 border-charcoal">
+                    <h3 class="font-bold text-charcoal mb-1">💡 Tips</h3>
+                    <ul class="list-none space-y-0.5">
+                        <li>• Control the center square</li>
+                        <li>• Think ahead - which piece goes next?</li>
+                        <li>• Force tough choices on your opponent</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button id="closeHelpBtn" class="mt-5 w-full py-3 bg-charcoal text-cream rounded-full font-bold border-2 border-charcoal hover:bg-coral transition-colors">
+                Got it!
+            </button>
+
+            <!-- About -->
+            <div class="mt-5 pt-4 border-t border-charcoal/20 text-center text-xs text-warm-gray">
+                <p class="mb-1">
+                    More games:
+                    <a href="https://www.kidssudoku.com" target="_blank" rel="noopener" class="text-charcoal hover:text-coral transition-colors">Kids Sudoku</a>
+                    •
+                    <a href="https://www.jdcaptcha.com" target="_blank" rel="noopener" class="text-charcoal hover:text-coral transition-colors">JDCaptcha</a>
+                </p>
+                <p>
+                    Made by <a href="https://www.conroyp.com" target="_blank" rel="noopener" class="text-charcoal hover:text-coral transition-colors">conroyp</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="gameOverModal" class="fixed inset-0 bg-charcoal/70 flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-300 p-4">
+        <canvas id="confettiCanvas" class="fixed inset-0 pointer-events-none z-40"></canvas>
+
+        <div class="bg-cream rounded-2xl p-8 max-w-sm w-full border-3 border-charcoal shadow-chunky text-center transform scale-95 transition-all duration-300 relative z-50">
+            <div id="resultEmojiContainer" class="mb-3">
+                <div id="resultEmoji" class="text-7xl">🏆</div>
+            </div>
+
+            <h2 id="resultTitle" class="text-4xl font-extrabold text-charcoal mb-1">Victory!</h2>
+            <p id="resultMessage" class="text-warm-gray mb-4">Amazing play!</p>
+
+            <div id="resultStats" class="flex justify-center gap-6 mb-6 py-3 px-4 bg-white rounded-xl border-2 border-charcoal text-sm">
+                <div class="text-center">
+                    <div class="font-bold text-green-600 text-xl" id="modalWins">0</div>
+                    <div class="text-warm-gray text-xs">Wins</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-bold text-red-500 text-xl" id="modalLosses">0</div>
+                    <div class="text-warm-gray text-xs">Losses</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-bold text-amber-500 text-xl" id="modalStreak">0</div>
+                    <div class="text-warm-gray text-xs">🔥 Streak</div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <button id="rematchBtn" class="btn-chunky py-3.5 bg-coral text-white rounded-full font-bold text-lg border-2 border-charcoal shadow-chunky-sm">
+                    Play Again
+                </button>
+                <button id="closeGameOverBtn" class="py-3 bg-white text-charcoal rounded-full font-semibold border-2 border-charcoal hover:bg-gray-100 transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thinking Indicator -->
+    <div id="thinkingIndicator" class="fixed top-6 left-1/2 -translate-x-1/2 bg-charcoal text-cream px-5 py-2.5 rounded-full border-2 border-charcoal shadow-chunky-sm opacity-0 pointer-events-none transition-opacity duration-300 text-sm font-semibold">
+        🤖 Thinking...
+    </div>
+
+    <script>
+        // ==================== GAME STATE ====================
+        let currentPlayer = 'X';
+        let gameBoard = Array(9).fill('');
+        let playerMoves = { X: [], O: [] };
+        let gameEnded = false;
+        let gameMode = '2player';
+        let difficulty = 'medium';
+        let soundEnabled = true;
+        let winningLine = null;
+
+        let stats = {
+            wins: 0,
+            losses: 0,
+            draws: 0,
+            streak: 0,
+            bestStreak: 0
+        };
+
+        // ==================== DOM ELEMENTS ====================
+        const cells = document.querySelectorAll('.cell');
+        const turnText = document.getElementById('turnText');
+        const helpModal = document.getElementById('helpModal');
+        const gameOverModal = document.getElementById('gameOverModal');
+        const thinkingIndicator = document.getElementById('thinkingIndicator');
+        const difficultySelector = document.getElementById('difficultySelector');
+        const streakDisplay = document.getElementById('streakDisplay');
+        const modeToggle = document.getElementById('modeToggle');
+        const label2P = document.getElementById('label2P');
+        const labelAI = document.getElementById('labelAI');
+
+        // ==================== AUDIO SYSTEM ====================
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) audioCtx = new AudioContext();
+        }
+
+        function playSound(type) {
+            if (!soundEnabled) return;
+            initAudio();
+
+            const now = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            switch(type) {
+                case 'place':
+                    osc.frequency.setValueAtTime(800, now);
+                    osc.frequency.exponentialRampToValueAtTime(600, now + 0.08);
+                    gain.gain.setValueAtTime(0.12, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+                    osc.start(now);
+                    osc.stop(now + 0.08);
+                    break;
+                case 'remove':
+                    osc.frequency.setValueAtTime(400, now);
+                    osc.frequency.exponentialRampToValueAtTime(150, now + 0.15);
+                    gain.gain.setValueAtTime(0.08, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.15);
+                    osc.start(now);
+                    osc.stop(now + 0.15);
+                    break;
+                case 'win':
+                    [660, 880, 1100, 1320].forEach((freq, i) => {
+                        const o = audioCtx.createOscillator();
+                        const g = audioCtx.createGain();
+                        o.connect(g);
+                        g.connect(audioCtx.destination);
+                        o.frequency.setValueAtTime(freq, now + i * 0.1);
+                        g.gain.setValueAtTime(0.12, now + i * 0.1);
+                        g.gain.exponentialRampToValueAtTime(0.01, now + i * 0.1 + 0.12);
+                        o.start(now + i * 0.1);
+                        o.stop(now + i * 0.1 + 0.12);
+                    });
+                    break;
+                case 'lose':
+                    osc.frequency.setValueAtTime(250, now);
+                    osc.frequency.exponentialRampToValueAtTime(120, now + 0.25);
+                    gain.gain.setValueAtTime(0.1, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
+                    osc.start(now);
+                    osc.stop(now + 0.25);
+                    break;
+            }
+        }
+
+        // ==================== STATS ====================
+        function loadStats() {
+            const saved = localStorage.getItem('tictacgo_stats');
+            if (saved) stats = JSON.parse(saved);
+            updateStatsDisplay();
+        }
+
+        function saveStats() {
+            localStorage.setItem('tictacgo_stats', JSON.stringify(stats));
+            updateStatsDisplay();
+        }
+
+        function updateStatsDisplay() {
+            document.getElementById('winCount').textContent = stats.wins;
+            document.getElementById('lossCount').textContent = stats.losses;
+            document.getElementById('drawCount').textContent = stats.draws;
+            document.getElementById('streakCount').textContent = stats.streak;
+            streakDisplay.classList.toggle('hidden', stats.streak === 0);
+        }
+
+        // ==================== EVENT LISTENERS ====================
+        cells.forEach(cell => cell.addEventListener('click', handleCellClick));
+
+        modeToggle.addEventListener('change', (e) => {
+            gameMode = e.target.checked ? 'computer' : '2player';
+            const statsBar = document.getElementById('statsBar');
+
+            // Update label colors and show/hide elements
+            if (e.target.checked) {
+                // vs Computer mode
+                label2P.classList.remove('text-white');
+                label2P.classList.add('text-charcoal');
+                labelAI.classList.remove('text-charcoal');
+                labelAI.classList.add('text-white');
+                difficultySelector.classList.remove('opacity-0', 'max-h-0');
+                difficultySelector.classList.add('opacity-100', 'max-h-20');
+                statsBar.classList.remove('hidden');
+                statsBar.classList.add('flex');
+            } else {
+                // 2 Player mode
+                label2P.classList.add('text-white');
+                label2P.classList.remove('text-charcoal');
+                labelAI.classList.add('text-charcoal');
+                labelAI.classList.remove('text-white');
+                difficultySelector.classList.add('opacity-0', 'max-h-0');
+                difficultySelector.classList.remove('opacity-100', 'max-h-20');
+                statsBar.classList.add('hidden');
+                statsBar.classList.remove('flex');
+            }
+
+            resetGame();
+        });
+
+        document.querySelectorAll('.diff-pill').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.diff-pill').forEach(b => {
+                    b.classList.remove('active');
+                    b.classList.add('bg-white');
+                });
+                e.target.classList.add('active');
+                e.target.classList.remove('bg-white');
+                difficulty = e.target.dataset.diff;
+                resetGame();
+            });
+        });
+
+        document.getElementById('resetBtn').addEventListener('click', resetGame);
+        document.getElementById('helpBtn').addEventListener('click', showHelp);
+        document.getElementById('closeHelpBtn').addEventListener('click', closeHelp);
+        document.getElementById('rematchBtn').addEventListener('click', () => { closeGameOver(); resetGame(); });
+        document.getElementById('closeGameOverBtn').addEventListener('click', closeGameOver);
+
+        document.getElementById('soundBtn').addEventListener('click', () => {
+            soundEnabled = !soundEnabled;
+            document.getElementById('soundIcon').textContent = soundEnabled ? '🔊' : '🔇';
+            if (soundEnabled) playSound('place');
+        });
+
+        helpModal.addEventListener('click', (e) => { if (e.target === helpModal) closeHelp(); });
+        gameOverModal.addEventListener('click', (e) => { if (e.target === gameOverModal) closeGameOver(); });
+
+        // ==================== GAME LOGIC ====================
+        function handleCellClick(e) {
+            if (gameEnded) return;
+            if (gameMode === 'computer' && currentPlayer === 'O') return;
+            const index = parseInt(e.target.dataset.index);
+            if (gameBoard[index] !== '') return;
+            makeMove(index);
+        }
+
+        async function makeMove(index) {
+            const movingPlayer = currentPlayer;
+
+            if (playerMoves[movingPlayer].length >= 3) {
+                await removeOldestMove(movingPlayer);
+            }
+
+            playSound('place');
+
+            gameBoard[index] = movingPlayer;
+            playerMoves[movingPlayer].push(index);
+
+            const cell = cells[index];
+            cell.textContent = movingPlayer;
+            cell.classList.add(movingPlayer === 'X' ? 'text-x' : 'text-o');
+            cell.classList.add('animate-pop-in', 'occupied');
+
+            setTimeout(() => cell.classList.remove('animate-pop-in'), 250);
+
+            const winResult = checkWinner();
+            if (winResult) {
+                gameEnded = true;
+                winningLine = winResult;
+                highlightWinningLine(winResult);
+                clearVanishIndicators();
+
+                setTimeout(() => {
+                    if (gameMode === 'computer') {
+                        if (movingPlayer === 'X') {
+                            stats.wins++;
+                            stats.streak++;
+                            if (stats.streak > stats.bestStreak) stats.bestStreak = stats.streak;
+                            playSound('win');
+                            showGameOver('win');
+                        } else {
+                            stats.losses++;
+                            stats.streak = 0;
+                            playSound('lose');
+                            showGameOver('lose');
+                        }
+                    } else {
+                        playSound('win');
+                        showGameOver('win', movingPlayer);
+                    }
+                    saveStats();
+                }, 500);
+                return;
+            }
+
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            updateTurnDisplay();
+            updateVanishIndicator();
+
+            if (gameMode === 'computer' && currentPlayer === 'O' && !gameEnded) {
+                const delay = 600 + Math.random() * 600;
+                thinkingIndicator.classList.remove('opacity-0');
+
+                setTimeout(() => {
+                    thinkingIndicator.classList.add('opacity-0');
+                    if (!gameEnded) makeComputerMove();
+                }, delay);
+            }
+        }
+
+        function removeOldestMove(player) {
+            return new Promise((resolve) => {
+                const oldestIndex = playerMoves[player][0];
+                const cell = cells[oldestIndex];
+
+                playSound('remove');
+
+                // Clear game state IMMEDIATELY so square is playable
+                gameBoard[oldestIndex] = '';
+                playerMoves[player].shift();
+                cell.classList.remove('occupied', 'animate-pulse-warning');
+
+                // Animation is purely visual
+                cell.classList.add('animate-fade-out');
+
+                setTimeout(() => {
+                    cell.textContent = '';
+                    cell.classList.remove('text-x', 'text-o', 'animate-fade-out');
+                    resolve();
+                }, 400);
+            });
+        }
+
+        function clearVanishIndicators() {
+            cells.forEach(c => c.classList.remove('animate-pulse-warning'));
+        }
+
+        function updateVanishIndicator() {
+            clearVanishIndicators();
+            const shouldShow = gameMode === '2player' || currentPlayer === 'X';
+            if (!shouldShow) return;
+
+            if (playerMoves[currentPlayer].length >= 3) {
+                const oldestIndex = playerMoves[currentPlayer][0];
+                cells[oldestIndex].classList.add('animate-pulse-warning');
+            }
+        }
+
+        function updateTurnDisplay() {
+            if (gameMode === '2player') {
+                const colorClass = currentPlayer === 'X' ? 'text-coral' : 'text-teal';
+                turnText.innerHTML = `Player <span class="${colorClass} font-extrabold">${currentPlayer}</span>'s turn`;
+            } else {
+                if (currentPlayer === 'X') {
+                    turnText.innerHTML = 'Your turn <span class="text-coral font-extrabold">(X)</span>';
+                } else {
+                    turnText.innerHTML = 'Bot\'s turn <span class="text-teal font-extrabold">(O)</span>';
+                }
+            }
+        }
+
+        function checkWinner() {
+            const patterns = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8],
+                [0, 3, 6], [1, 4, 7], [2, 5, 8],
+                [0, 4, 8], [2, 4, 6]
+            ];
+            for (const [a, b, c] of patterns) {
+                if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
+                    return [a, b, c];
+                }
+            }
+            return null;
+        }
+
+        function highlightWinningLine(pattern) {
+            pattern.forEach(i => cells[i].classList.add('winning-cell'));
+        }
+
+        // ==================== CONFETTI ====================
+        const confettiCanvas = document.getElementById('confettiCanvas');
+        const confettiCtx = confettiCanvas.getContext('2d');
+        let confettiParticles = [];
+        let confettiAnimationId = null;
+
+        function resizeConfettiCanvas() {
+            confettiCanvas.width = window.innerWidth;
+            confettiCanvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeConfettiCanvas);
+        resizeConfettiCanvas();
+
+        class ConfettiParticle {
+            constructor() {
+                this.x = Math.random() * confettiCanvas.width;
+                this.y = -10;
+                this.size = Math.random() * 8 + 4;
+                this.speedY = Math.random() * 3 + 2;
+                this.speedX = Math.random() * 4 - 2;
+                this.rotation = Math.random() * 360;
+                this.rotationSpeed = Math.random() * 10 - 5;
+                this.color = ['#FF6B4A', '#20B2AA', '#FFE66D', '#2D3142', '#FF8FA3', '#64B5F6'][Math.floor(Math.random() * 6)];
+            }
+
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                this.rotation += this.rotationSpeed;
+                this.speedY += 0.05;
+            }
+
+            draw() {
+                confettiCtx.save();
+                confettiCtx.translate(this.x, this.y);
+                confettiCtx.rotate((this.rotation * Math.PI) / 180);
+                confettiCtx.fillStyle = this.color;
+                confettiCtx.fillRect(-this.size / 2, -this.size / 4, this.size, this.size / 2);
+                confettiCtx.restore();
+            }
+        }
+
+        function launchConfetti() {
+            confettiParticles = [];
+            for (let i = 0; i < 80; i++) {
+                setTimeout(() => confettiParticles.push(new ConfettiParticle()), i * 15);
+            }
+            animateConfetti();
+        }
+
+        function animateConfetti() {
+            confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+            confettiParticles = confettiParticles.filter(p => p.y < confettiCanvas.height + 20);
+            confettiParticles.forEach(p => { p.update(); p.draw(); });
+            if (confettiParticles.length > 0) {
+                confettiAnimationId = requestAnimationFrame(animateConfetti);
+            }
+        }
+
+        function stopConfetti() {
+            if (confettiAnimationId) {
+                cancelAnimationFrame(confettiAnimationId);
+                confettiAnimationId = null;
+            }
+            confettiParticles = [];
+            confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+        }
+
+        // ==================== MODALS ====================
+        function showHelp() {
+            helpModal.classList.remove('opacity-0', 'pointer-events-none');
+            helpModal.querySelector('div').classList.remove('scale-95');
+        }
+
+        function closeHelp() {
+            helpModal.classList.add('opacity-0', 'pointer-events-none');
+            helpModal.querySelector('div').classList.add('scale-95');
+        }
+
+        function showGameOver(result, player = null) {
+            const emoji = document.getElementById('resultEmoji');
+            const title = document.getElementById('resultTitle');
+            const message = document.getElementById('resultMessage');
+            const resultStats = document.getElementById('resultStats');
+
+            document.getElementById('modalWins').textContent = stats.wins;
+            document.getElementById('modalLosses').textContent = stats.losses;
+            document.getElementById('modalStreak').textContent = stats.streak;
+
+            if (gameMode === '2player') {
+                emoji.textContent = '🏆';
+                title.textContent = `Player ${player} Wins!`;
+                message.textContent = 'Great match!';
+                resultStats.classList.add('hidden');
+                launchConfetti();
+            } else {
+                resultStats.classList.remove('hidden');
+                if (result === 'win') {
+                    emoji.textContent = '🏆';
+                    title.textContent = 'Victory!';
+                    if (stats.streak >= 5) message.textContent = `Unstoppable! ${stats.streak} in a row!`;
+                    else if (stats.streak >= 3) message.textContent = `On fire! ${stats.streak} streak!`;
+                    else message.textContent = ['Brilliant!', 'Well played!', 'Excellent!'][Math.floor(Math.random() * 3)];
+                    launchConfetti();
+                } else if (result === 'lose') {
+                    emoji.textContent = '😔';
+                    title.textContent = 'Defeated';
+                    message.textContent = ['Bot got lucky...', 'Close one!', 'Try again!'][Math.floor(Math.random() * 3)];
+                } else {
+                    emoji.textContent = '🤝';
+                    title.textContent = "It's a Draw!";
+                    message.textContent = 'Evenly matched!';
+                }
+            }
+
+            gameOverModal.classList.remove('opacity-0', 'pointer-events-none');
+            gameOverModal.querySelector('.bg-cream').classList.remove('scale-95');
+        }
+
+        function closeGameOver() {
+            gameOverModal.classList.add('opacity-0', 'pointer-events-none');
+            gameOverModal.querySelector('.bg-cream').classList.add('scale-95');
+            stopConfetti();
+        }
+
+        // ==================== AI ====================
+        function makeComputerMove() {
+            if (gameEnded || currentPlayer !== 'O') return;
+
+            let moveIndex;
+            switch(difficulty) {
+                case 'easy': moveIndex = getEasyMove(); break;
+                case 'medium': moveIndex = getMediumMove(); break;
+                case 'hard': moveIndex = getHardMove(); break;
+                default: moveIndex = getMediumMove();
+            }
+
+            if (moveIndex !== -1) makeMove(moveIndex);
+        }
+
+        function getAvailableMoves() {
+            return gameBoard.map((c, i) => c === '' ? i : null).filter(i => i !== null);
+        }
+
+        function getRandomMove() {
+            const avail = getAvailableMoves();
+            return avail.length > 0 ? avail[Math.floor(Math.random() * avail.length)] : -1;
+        }
+
+        function getEasyMove() {
+            const block = findWinningMove('X');
+            if (block !== -1 && Math.random() < 0.7) return block;
+            return Math.random() < 0.6 ? getRandomMove() : getStrategicMove();
+        }
+
+        function getMediumMove() {
+            const win = findWinningMove('O');
+            if (win !== -1) return win;
+            const block = findWinningMove('X');
+            if (block !== -1) return block;
+            return Math.random() < 0.3 ? getRandomMove() : getStrategicMove();
+        }
+
+        function getHardMove() {
+            const win = findWinningMove('O');
+            if (win !== -1) return win;
+            const block = findWinningMove('X');
+            if (block !== -1) return block;
+            const fork = findForkMove('O');
+            if (fork !== -1) return fork;
+            const blockFork = findForkMove('X');
+            if (blockFork !== -1) return blockFork;
+            return getStrategicMove();
+        }
+
+        function getStrategicMove() {
+            if (gameBoard[4] === '') return 4;
+            const corners = [0, 2, 6, 8].filter(i => gameBoard[i] === '');
+            if (corners.length > 0) {
+                const opp = corners.find(c => gameBoard[8 - c] === 'X');
+                return opp !== undefined ? opp : corners[Math.floor(Math.random() * corners.length)];
+            }
+            const edges = [1, 3, 5, 7].filter(i => gameBoard[i] === '');
+            return edges.length > 0 ? edges[Math.floor(Math.random() * edges.length)] : getRandomMove();
+        }
+
+        function findWinningMove(player) {
+            const patterns = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+            for (const [a, b, c] of patterns) {
+                const line = [gameBoard[a], gameBoard[b], gameBoard[c]];
+                if (line.filter(x => x === player).length === 2 && line.filter(x => x === '').length === 1) {
+                    return [a, b, c].find(i => gameBoard[i] === '');
+                }
+            }
+            return -1;
+        }
+
+        function findForkMove(player) {
+            for (const move of getAvailableMoves()) {
+                gameBoard[move] = player;
+                let threats = 0;
+                const patterns = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+                for (const [a, b, c] of patterns) {
+                    const line = [gameBoard[a], gameBoard[b], gameBoard[c]];
+                    if (line.filter(x => x === player).length === 2 && line.filter(x => x === '').length === 1) threats++;
+                }
+                gameBoard[move] = '';
+                if (threats >= 2) return move;
+            }
+            return -1;
+        }
+
+        // ==================== RESET ====================
+        function resetGame() {
+            currentPlayer = 'X';
+            gameBoard = Array(9).fill('');
+            playerMoves = { X: [], O: [] };
+            gameEnded = false;
+            winningLine = null;
+
+            cells.forEach(cell => {
+                cell.textContent = '';
+                cell.classList.remove('text-x', 'text-o', 'animate-pop-in', 'animate-fade-out', 'animate-pulse-warning', 'winning-cell', 'occupied');
+            });
+
+            thinkingIndicator.classList.add('opacity-0');
+            updateTurnDisplay();
+        }
+
+        // ==================== INIT ====================
+        loadStats();
+        updateTurnDisplay();
+    </script>
+</body>
+</html>
