@@ -27,14 +27,9 @@ Play at: [tictacgoaway.com](https://www.tictacgoaway.com)
 
 ## Deployment
 
-The game is a single self-contained HTML file with inlined CSS and JavaScript.
+A single self-contained `index.html` (inlined CSS + JavaScript), plus `favicon.png` and `og-image.png`. No build process, no dependencies, no server-side code.
 
-**Files needed for deployment:**
-- `index.html` (~53KB)
-- `favicon.png` (~17KB)
-- `og-image.png` (~88KB)
-
-No build process, no dependencies, no server-side code. Just upload and serve.
+Hosted on **Cloudflare Pages**, connected to this GitHub repo — **every push to `main` auto-deploys**. The site is fully static, so the Pages project uses **build command: none** and **output directory: `/`** (repo root). Custom domain: **tictacgoaway.com**. (Migrated from S3 static hosting.)
 
 ## Tech Stack
 
@@ -58,7 +53,7 @@ Then inline the output into the `<style>` tag in `index.html`.
 
 ## License
 
-MIT
+Released under the [MIT License](LICENSE) — free to use.
 
 ## Author
 
